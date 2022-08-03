@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayerActivity">
+
+    <TextView
+        android:id="@+id/label_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekbar_red"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:max="255"
+        android:min="0"
+        app:layout_constraintBottom_toBottomOf="@+id/textview_red"
+        app:layout_constraintEnd_toStartOf="@+id/textview_red"
+        app:layout_constraintStart_toStartOf="@+id/guideline1" />
+
+    <TextView
+        android:id="@+id/textview_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/label_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="13dp"
+        android:text="Green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_red" />
+
+    <SeekBar
+        android:id="@+id/seekbar_green"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:min="0"
+        app:layout_constraintEnd_toStartOf="@+id/textview_red"
+        app:layout_constraintStart_toEndOf="@+id/label_green"
+        app:layout_constraintTop_toTopOf="@+id/textview_green" />
+
+    <TextView
+        android:id="@+id/textview_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_red" />
+
+    <TextView
+        android:id="@+id/label_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="Blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_green" />
+
+    <SeekBar
+        android:id="@+id/seekbar_blue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:min="0"
+        app:layout_constraintEnd_toStartOf="@+id/textview_red"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toTopOf="@+id/textview_blue" />
+
+    <TextView
+        android:id="@+id/textview_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_red" />
+
+    <ImageView
+        android:id="@+id/imageview_album_cover"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar_blue"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <SeekBar
+        android:id="@+id/seekbar_song_position"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="4dp"
+        android:max="100"
+        android:min="0"
+        app:layout_constraintBottom_toTopOf="@+id/label_votes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup_songs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="8dp"
+        android:checkedButton="@id/radio_song1"
+        app:layout_constraintBottom_toTopOf="@+id/ratingbar_voter_rating"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/radio_song1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="&quot;Epic Heart&quot;" />
+
+        <RadioButton
+            android:id="@+id/radio_song2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="&quot;Future Bass&quot;" />
+
+        <RadioButton
+            android:id="@+id/radio_song3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="&quot;Clover&quot;" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/label_votes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Votes"
+        app:layout_constraintBottom_toTopOf="@+id/radiogroup_songs"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressbar_average_rating1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:max="5"
+        android:min="1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/radiogroup_songs" />
+
+    <TextView
+        android:id="@+id/textview_num_votes1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/progressbar_average_rating1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/label_votes"
+        app:layout_constraintTop_toTopOf="@+id/progressbar_average_rating1" />
+
+    <ProgressBar
+        android:id="@+id/progressbar_average_rating2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="180dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="32dp"
+        android:max="5"
+        android:min="1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/progressbar_average_rating1" />
+
+    <TextView
+        android:id="@+id/textview_num_votes2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/progressbar_average_rating2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/label_votes"
+        app:layout_constraintTop_toTopOf="@+id/progressbar_average_rating2" />
+
+    <ProgressBar
+        android:id="@+id/progressbar_average_rating3"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="180dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="36dp"
+        android:max="5"
+        android:min="1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/progressbar_average_rating2" />
+
+    <TextView
+        android:id="@+id/textview_num_votes3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/progressbar_average_rating3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/label_votes"
+        app:layout_constraintTop_toTopOf="@+id/progressbar_average_rating3" />
+
+    <RatingBar
+        android:id="@+id/ratingbar_voter_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="62dp"
+        android:numStars="5"
+        android:stepSize="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_cast_vote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Cast Vote"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingbar_voter_rating" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="53dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="193dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="373dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
